@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/konva@9.2.0/konva.js"></script>
+    <meta charset="utf-8" />
+    <title>Mind Map</title>
+    <link rel="stylesheet" href="./css.css"/>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <a class="color-clic" href="./index.html">Accueil</a>
+            <a class="color-clic" href="./presentation.html" class ="active">Présentation</a>
+            <a class="color-clic" href="./btssio.html">BTS SIO</a>
+            <a class="color-clic" href="./organisation.html">Organisation</a>
+            <a class="color-clic" href="./contact.html">Contact</a>
+            <a class="color-clic" href="./mindmap.html">MINDMAP</a>
+        </nav>
+    </header>
+	<nav id="submenu">	
+		<div>
+			<div>
+			  <label>Nom de la mind map  : </label>
+			  <input type="text" id="className"/>
+		  </div>
+		  <div>
+			<span id="currentMode"></span>
+		  </div>
+		</div>
+	</nav>
+	<div id="main" style="padding: 5px; display:flex; height:85vh">
+		<div id="container" style="border: 1px solid rgb(255, 255, 255);width:70%;overflow:hidden"></div>
+		<div id="menu" style="width:30%">
+			<form style="display:flex; flex-direction: column; padding: 1em;" name="skill">
+				<label>Nom : </label><input style = "width: 33em;" type="text" oninput="majField(this)" name="name"/>
+				<label>Description : </label><input style = "width: 33em;" type="text" oninput="majDescription()" name = "description" />
+			</form>
+		</div>
+	</div>
+	<div class="tooltipND" id="tooltip">
+	</div>
+	<script src="./config.js"></script>
+    <script src="./mindmap.js"></script>
+	<script src="./customScript.js"></script>
+  </body>
+</html>
